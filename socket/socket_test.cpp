@@ -70,11 +70,12 @@ int main()
 				else 
 					exit(1);
 			}
+			printf("receive data %d\n", retlen);
 			recvlen += retlen;
 			leftlen -= retlen;
 			ptr += retlen;
 		}
-		printf("receive data is : %s", recvbuf);
+		printf("receive data is : %s\n", recvbuf);
 		close(app_sock);
 	}
 	close(listen_sock);
